@@ -1,5 +1,7 @@
 package com.intellekta;
 
+import java.util.ArrayList;
+
 public class Viewer {
     private String nikname;
 
@@ -7,10 +9,23 @@ public class Viewer {
 
     private int numberOfFilms;
 
-    public Viewer(String nikname, int age, int numberOfFilms) {
+    private ArrayList<Cinema> filmList;
+
+
+    public Viewer(String nikname, int age, ArrayList<Cinema> cinemas) {
         this.nikname = nikname;
         this.age = age;
-        this.numberOfFilms = numberOfFilms;
+        if (cinemas!=null) this.numberOfFilms = cinemas.size();
+        else this.numberOfFilms=0;
+        this.filmList = cinemas;
+    }
+
+    public ArrayList<Cinema> getFilmList() {
+        return filmList;
+    }
+
+    public void setFilmList(ArrayList<Cinema> filmList) {
+        this.filmList = filmList;
     }
 
     public String getNikname() {

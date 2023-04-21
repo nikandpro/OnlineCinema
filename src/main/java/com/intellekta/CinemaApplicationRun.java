@@ -9,7 +9,7 @@ public class CinemaApplicationRun {
         Random rd = new Random();
         ArrayList<Viewer> viewers = new ArrayList<Viewer>();
         for (int i=0; i<5; i++) {
-            viewers.add(new Viewer("viewer"+i,rd.nextInt(50),rd.nextInt(20)));
+            viewers.add(new Viewer("viewer"+i,rd.nextInt(50), null));
         }
         System.out.println(ViewerStatistics.averageAge(viewers));
     }
